@@ -1,5 +1,6 @@
 import sys
 from display import Display
+from buttons import ButtonsGrid
 from info import Info
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QLabel
@@ -29,7 +30,10 @@ if __name__ == "__main__":
     #display
     display = Display("Texto inicial")
     window.addWidgetToVLayout(display)
-    window.addWidgetToVLayout(Display("Display 2"))
+
+    #grid de botões
+    buttonsGrid = ButtonsGrid()
+    window.vLayout.addLayout(buttonsGrid)
 
     window.adjustFixedSize()
     window.show()
