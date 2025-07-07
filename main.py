@@ -1,4 +1,5 @@
 import sys
+from display import Display
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QLabel
 from main_window import MainWindow
@@ -18,6 +19,11 @@ if __name__ == "__main__":
     icon = QIcon(str(WINDOW_ICON_PATH), )
     window.setWindowIcon(icon)
     app.setWindowIcon(icon)
+
+    #display
+    display = Display("Texto inicial")
+    window.addWidgetToVLayout(display)
+    window.addWidgetToVLayout(Display("Display 2"))
 
     window.adjustFixedSize()
     window.show()
