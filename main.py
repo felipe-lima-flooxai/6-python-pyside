@@ -24,7 +24,7 @@ if __name__ == "__main__":
     app.setWindowIcon(icon)
 
     #info
-    info = Info("2.0 ^ 10.0 = 1024")
+    info = Info('Sua conta')
     window.addWidgetToVLayout(info)
 
     #display
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     window.addWidgetToVLayout(display)
 
     #grid de botões
-    buttonsGrid = ButtonsGrid(display)
+    buttonsGrid = ButtonsGrid(display, info)
     window.vLayout.addLayout(buttonsGrid)
 
     window.adjustFixedSize()
