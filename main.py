@@ -28,7 +28,7 @@ if __name__ == "__main__":
     window.addWidgetToVLayout(info)
 
     #display
-    display = Display("Texto inicial")
+    display = Display("")
     window.addWidgetToVLayout(display)
 
     #grid de botões
